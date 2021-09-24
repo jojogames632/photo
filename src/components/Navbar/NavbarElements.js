@@ -7,12 +7,17 @@ export const Nav = styled.nav`
 	height: 80px;
 	display: flex;
 	justify-content: space-between;
-	padding: 0.5rem calc((100vw - 1000px) / 2);
+	padding: 0.5rem;
 	z-index: 10;
+
+	@media screen and (max-width: 768px) {
+		padding: 0;
+	}
 `
 
 export const NavLink = styled(Link)`
 	color: #fff;
+	white-space: nowrap;
 	display: flex;
 	align-items: center;
 	text-decoration: none;
@@ -43,7 +48,17 @@ export const Bars = styled(FaBars)`
 export const NavMenu = styled.div`
 	display: flex;
 	align-items: center;
-	margin-right: -24px;
+
+	@media screen and (max-width: 768px) {
+		display: none;
+	}
+`
+
+export const SocialBtn = styled.div`
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 100px;
 
 	@media screen and (max-width: 768px) {
 		display: none;
