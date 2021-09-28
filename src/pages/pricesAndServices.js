@@ -26,12 +26,12 @@ const PricesAndServices = () => {
 			description: 'Pour la famille ou les amis jusqu’à 4 personnes, en extérieur ou en studio',
 			price: 220,
 			svg: 'multiple',
-			info: '+ 30€ / personne au-delà de 4 (hormis enfant jusqu\'à 2 ans'
+			info: '+ 30€ / personne au-delà de 4 (hormis enfant jusqu\'à 2 ans)'
 		},
 		{
 			id: 4,
 			title: 'Il était une fois',
-			description: 'Séance pour une personne, en extérieur ou en studio',
+			description: 'Photo de grossesse (À votre domicile, en extérieur ou en studio)',
 			price: 160,
 			svg: 'solo',
 			info: null
@@ -39,7 +39,7 @@ const PricesAndServices = () => {
 		{
 			id: 5,
 			title: 'Mon bébé',
-			description: 'Séance pour une personne, en extérieur ou en studio',
+			description: 'Photo d\'enfant jusqu\'à 3 ans (photo à domicile)',
 			price: 100,
 			svg: 'solo',
 			info: null
@@ -47,7 +47,7 @@ const PricesAndServices = () => {
 		{
 			id: 6,
 			title: 'J\'immortalise l\'événement',
-			description: 'Séance pour une personne, en extérieur ou en studio',
+			description: 'Prestation de mariage ou baptême sur devis',
 			price: '?',
 			svg: 'solo',
 			info: null
@@ -56,7 +56,7 @@ const PricesAndServices = () => {
 
 	return (
 		<Main>
-			<h1>Tarifs & prestations</h1>
+			<MainTitle>Tarifs & prestations</MainTitle>
 			<ServicesContainer>
 				{services.map((service, index) => {
 					return (
@@ -71,7 +71,7 @@ const PricesAndServices = () => {
 									<path d="M4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z"/>
 								</svg>}
 							<TopHandband />
-							<h2>{service.title}</h2>
+							<Title>{service.title}</Title>
 							<Description>{service.description}</Description>
 							<Cost>{service.price === '?' ? 'Sur devis' : service.price + ' €'}</Cost>
 							<BotHandband />
@@ -94,14 +94,32 @@ const Main = styled.div`
 	background-color: #E9EAED;
 `
 
+const MainTitle = styled.h1`
+	@media screen and (max-width: 768px) {
+		font-size: 20px;
+	};
+`
+
+const Title = styled.h2`
+	margin-top: 60px;
+
+	@media screen and (max-width: 768px) {
+		font-size: 18px;
+		margin-top: 14px;
+	}
+`
+
 const ServicesContainer = styled.div`
 	display: grid;
 	place-items: center;
-	grid-template-columns: repeat(3, 30vw);
-	margin-top: 10vh;
+	grid-template-columns: repeat(3, 32vw);
+	margin-top: 4vh;
 
 	@media screen and (max-width: 768px) {
-		grid-template-columns: repeat(2, 40vw);
+		grid-template-columns: repeat(1, 100vw);
+		margin-top: 40px;
+		height: 630px;
+		overflow: scroll;
 	}
 `
 
@@ -109,33 +127,38 @@ const Services = styled.div`
 	border: 1px solid black;
 	border-radius: 10px;
 	box-shadow: 3px 3px 6px 2px rgba(0,0,0,0.6);
-	width: 25vw;
-	height: 20vh;
-	margin-bottom: 10vh;
+	width: 30vw;
+	height: 25vh;
+	margin-bottom: 5vh;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	justify-content: center;
 	background-color: #dfd8e3;
 	position: relative;
 	overflow: hidden;
 
 	@media screen and (max-width: 768px) {
-		width: 35vw;
+		width: 90vw;
+		height: 22vh;
 	}
 `
 
 const Description = styled.p`
 	text-align: center;
-	margin-top: 2vh;
+	margin-top: 30px;
 	margin-bottom: 3vh;
+
+	@media screen and (max-width: 768px) {
+		font-size: 12px;
+	}
 `
 
 const Cost = styled.span`
 	position: absolute;
-	bottom: 32px;
+	bottom: 35px;
 	z-index: 9;
 	font-weight: bold;
+	font-size: 14px;
 `
 
 const TopHandband = styled.div`
@@ -163,12 +186,23 @@ const BannerImg = styled.img`
 	width: 130px;
 	position: absolute;
 	bottom: 0px;
+
+	@media screen and (max-width: 768px) {
+		height: 50px;
+		width: 90px;
+		bottom: 15px;
+	}
 `
 
 const Info = styled.span`
 	position: absolute;
 	bottom: 5px;
 	font-size: 12px;
+	text-align: center;
+
+	@media screen and (max-width: 768px) {
+		font-size: 10px;
+	}
 `
 
 export default PricesAndServices
