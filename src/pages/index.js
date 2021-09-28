@@ -18,11 +18,16 @@ const Main = styled.main`
 	background-image: url(${Background});
 	background-size: cover;
 	background-position: center;
+	white-space: nowrap;
 `
 
 const Title = styled.h1`
 	color: #d288e3;
 	font-size: 50px;
+
+	@media screen and (max-width: 768px) {
+		font-size: 30px;
+	}
 `
 
 export default Home

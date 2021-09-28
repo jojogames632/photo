@@ -17,16 +17,16 @@ const Navbar = ({ toggle }) => {
 				</NavLink>
 				<Bars onClick={toggle} />
 				<NavMenu>
-					<NavLink to='/' activeStyle={{ color: "black"}}>
+					<NavLink to='/' exact activeStyle={{ color: "black"}}>
 						Accueil
 					</NavLink>
-					<NavLink to='/galery' activeStyle={{ color: "black"}}>
+					<NavLink to='/galery' exact activeStyle={{ color: "black"}}>
 						Galerie
 					</NavLink>
-					<NavLink to='/prices-and-services' activeStyle={{ color: "black"}}>
+					<NavLink to='/prices-and-services' exact activeStyle={{ color: "black"}}>
 						Tarifs & préstations
 					</NavLink>
-					<NavLink to='/contact' activeStyle={{ color: "black"}}>
+					<NavLink to='/contact' exact activeStyle={{ color: "black"}}>
 						Contact
 					</NavLink>
 				</NavMenu>
