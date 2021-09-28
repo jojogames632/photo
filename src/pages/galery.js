@@ -219,13 +219,14 @@ const Galery = () => {
 	
 	return (
 		<Main>
-			<h1>Gallerie</h1>
+			<Title>Gallerie</Title>
 			<GalleryContainer>
 				<Tab>
 					{categories.map((category, index) => (
 						<TabName 
 							key={index}
-							onClick={() => setActiveTab(category)}	
+							onClick={() => setActiveTab(category)}
+							className={activeTab === category ? 'active' : null}	
 						>
 							{category}
 						</TabName>
@@ -252,11 +253,22 @@ const Galery = () => {
 	)
 }
 
+const Title = styled.h1`
+	@media screen and (max-width: 767px) {
+		margin-top: 50px;
+	}
+`
+
 const PicContainer = styled.div`
 	height: 140px;
 	width: 240px;
 	margin: 5px;
 	position: relative;
+
+	@media screen and (max-width: 767px) {
+		height: 70px;
+		width: 170px;
+	}
 `
 
 const Image = styled.img`
@@ -280,27 +292,41 @@ const Category = styled.span`
 const Tab = styled.div`
 	display: flex;
 	margin-bottom: 30px;
+
+	@media screen and (max-width: 767px) {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		text-align: center;
+	}
 `
 
 const TabName = styled.span`
-	margin-right: 3vw;
+	margin-right: 2.5vw;
 	margin-left: 15px;
 	cursor: pointer;
+	padding: 5px;
+	border-radius: 10px;
+
+	&.active {
+		background-color: #dfbfff;
+		color: white;
+	}
 
 	@media screen and (max-width: 1000px) and (min-width: 768px) {
 		margin-right: 2vw;
 		font-size: 14px;
 	}
 
-	@media screen and (max-width: 768px) {
-		margin-right: 1vw;
-		font-size: 10px;	
+	@media screen and (max-width: 767px) {
+		margin-right: 0vw;
+		font-size: 10px;
 	}	
 `
 
 const Gallery = styled.div`
 	display: grid;
 	grid-template-columns: repeat(5, 250px);
+	grid-template-rows: repeat(2, 150px);
 	height: 750px;
 	overflow: scroll;
 
@@ -310,10 +336,14 @@ const Gallery = styled.div`
 
 	@media screen and (max-width: 1000px) and (min-width: 768px) {
 		grid-template-columns: repeat(3, 250px);
+		grid-template-rows: repeat(3, 150px);
+		height: 500px;
 	}
 
-	@media screen and (max-width: 768px) {
-		grid-template-columns: repeat(2, 250px);	
+	@media screen and (max-width: 767px) {
+		grid-template-rows: repeat(2, 80px);
+		grid-template-columns: repeat(2, 180px);
+		height: 400px;
 	}	
 `
 

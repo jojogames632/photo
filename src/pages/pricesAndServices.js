@@ -56,7 +56,7 @@ const PricesAndServices = () => {
 
 	return (
 		<Main>
-			<h1>Tarifs & préstations</h1>
+			<h1>Tarifs & prestations</h1>
 			<ServicesContainer>
 				{services.map((service, index) => {
 					return (
@@ -134,7 +134,7 @@ const Description = styled.p`
 const Cost = styled.span`
 	position: absolute;
 	bottom: 32px;
-	z-index: 10;
+	z-index: 9;
 	font-weight: bold;
 `
 

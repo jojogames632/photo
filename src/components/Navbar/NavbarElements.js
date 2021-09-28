@@ -26,6 +26,14 @@ export const NavLink = styled(Link)`
 	cursor: pointer;
 `
 
+export const LogoImg = styled.img`
+	height: 70px;
+
+	@media screen and (max-width: 768px) {
+		height: 50px;
+	}
+`
+
 export const Bars = styled(FaBars)`
 	display: none;
 	color: #fff;

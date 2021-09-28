@@ -4,7 +4,8 @@ import {
 	NavLink,
 	Bars,
 	NavMenu,
- 	SocialBtn
+	SocialBtn,
+	LogoImg
 } from './NavbarElements';
 import Logo from '../../images/logo.png';
 
@@ -13,7 +14,7 @@ const Navbar = ({ toggle }) => {
 		<>
 			<Nav>
 				<NavLink to='/'>
-					<img src={Logo} alt='logo' style={{ height: 70 }}/>
+					<LogoImg src={Logo} alt='logo' />
 				</NavLink>
 				<Bars onClick={toggle} />
 				<NavMenu>

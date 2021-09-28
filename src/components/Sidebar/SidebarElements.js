@@ -10,6 +10,7 @@ export const Background = styled.div`
 	bottom: 0;
 	height: 100%;
 	width: 100%;
+	z-index: 10;
 	transition: 0.4s ease-in-out;
 `
 
