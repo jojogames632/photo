@@ -254,8 +254,17 @@ const Galery = () => {
 }
 
 const Title = styled.h1`
-	@media screen and (max-width: 767px) {
-		margin-top: 50px;
+	@media screen and (min-width: 1400px) and (max-width: 1500px) {
+			margin-top: 40px;
+	}
+
+	@media screen and (min-width: 1000px) and (max-width: 1399px) {
+		margin-top: -100px;
+		font-size: 40px;
+	}
+
+	@media screen and (max-width: 1000px) and (min-width: 768px) {
+		margin-top: -100px;
 	}
 `
 
@@ -330,7 +339,11 @@ const Gallery = styled.div`
 	height: 750px;
 	overflow: scroll;
 
-	@media screen and (max-width: 1300px) and (min-width: 1000px) {
+	@media screen and (min-width: 1400px) and (max-width: 1500px) {
+		height: 600px;
+	}
+
+	@media screen and (min-width: 1000px) and (max-width: 1399px) {
 		grid-template-columns: repeat(4, 250px);
 	}
 
@@ -350,7 +363,7 @@ const Gallery = styled.div`
 const GalleryContainer = styled.div`
 	display: flex;
 	flex-direction: column;
-	margin-top: 8vh;
+	margin-top: 7vh;
 `
 
 const Main = styled.div`

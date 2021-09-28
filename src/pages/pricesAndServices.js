@@ -95,7 +95,15 @@ const Main = styled.div`
 `
 
 const MainTitle = styled.h1`
-	@media screen and (max-width: 768px) {
+	@media screen and (min-width: 1024px) and (max-width: 1199px) {
+		font-size: 30px;
+	}
+
+	@media screen and (min-width: 768px) and (max-width: 1199px) {
+		font-size: 25px;
+	}
+
+	@media screen and (max-width: 767px) {
 		font-size: 20px;
 	};
 `
@@ -103,6 +111,10 @@ const MainTitle = styled.h1`
 const Title = styled.h2`
 	margin-top: 60px;
 
+	@media screen and (min-width: 1024px) and (max-width: 1199px) {
+		font-size: 25px;
+	}
+	
 	@media screen and (max-width: 768px) {
 		font-size: 18px;
 		margin-top: 14px;
@@ -115,12 +127,17 @@ const ServicesContainer = styled.div`
 	grid-template-columns: repeat(3, 32vw);
 	margin-top: 4vh;
 
-	@media screen and (max-width: 768px) {
+	@media screen and (min-width: 768px) and (max-width: 1199px) {
+		grid-template-columns: repeat(2, 50vw);
+		margin-top: 40px;
+	}
+
+	@media screen and (max-width: 767px) {
 		grid-template-columns: repeat(1, 100vw);
 		margin-top: 40px;
 		height: 630px;
 		overflow: scroll;
-	}
+	}	
 `
 
 const Services = styled.div`
@@ -137,7 +154,16 @@ const Services = styled.div`
 	position: relative;
 	overflow: hidden;
 
-	@media screen and (max-width: 768px) {
+	@media screen and (min-width: 1200px) and (max-width: 1440px) {
+		height: 30vh;
+	}
+
+	@media screen and (min-width: 768px) and (max-width: 1199px) {
+		width: 45vw;
+		height: 22vh;
+	}	
+	
+	@media screen and (max-width: 767px) {
 		width: 90vw;
 		height: 22vh;
 	}
@@ -145,10 +171,19 @@ const Services = styled.div`
 
 const Description = styled.p`
 	text-align: center;
-	margin-top: 30px;
+	margin-top: 50px;
 	margin-bottom: 3vh;
+	font-size: 14px;
 
-	@media screen and (max-width: 768px) {
+	@media screen and (min-width: 1200px) and (max-width: 1440px) {
+		margin-top: 25px;
+	}
+
+	@media screen and (min-width: 1024px) and (max-width: 1199px) {
+		font-size: 18px;
+	}
+
+	@media screen and (max-width: 767px) {
 		font-size: 12px;
 	}
 `
@@ -159,6 +194,10 @@ const Cost = styled.span`
 	z-index: 9;
 	font-weight: bold;
 	font-size: 14px;
+
+	@media screen and (min-width: 768px) and (max-width: 1199px) {
+		bottom: 50px;
+	}
 `
 
 const TopHandband = styled.div`
@@ -187,10 +226,15 @@ const BannerImg = styled.img`
 	position: absolute;
 	bottom: 0px;
 
-	@media screen and (max-width: 768px) {
+	@media screen and (max-width: 767px) {
 		height: 50px;
 		width: 90px;
 		bottom: 15px;
+	}
+
+	@media screen and (min-width: 768px) and (max-width: 1199px) {
+		bottom: 25px;
+		height: 65px;
 	}
 `
 
@@ -200,7 +244,7 @@ const Info = styled.span`
 	font-size: 12px;
 	text-align: center;
 
-	@media screen and (max-width: 768px) {
+	@media screen and (max-width: 767px) {
 		font-size: 10px;
 	}
 `
