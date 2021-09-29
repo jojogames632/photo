@@ -76,6 +76,10 @@ const LeftAside = styled.div`
 	justify-content: center;
 
 	margin-right: 150px;
+
+	@media screen and (max-width: 1199px) {
+		margin-right: 0;
+	}
 `
 
 const SubmitBtn = styled.button`
@@ -95,6 +99,14 @@ const SubmitBtn = styled.button`
 const Infos = styled.p`
 	width: 20vw;
 	margin-bottom: 50px;
+
+	@media screen and (max-width: 1199px) {
+		width: 50vw;
+	}
+
+	@media screen and (max-width: 767px) {
+		width: 85vw;
+	}
 `
 
 const Form = styled.form`
@@ -102,17 +114,34 @@ const Form = styled.form`
 	flex-direction: column;
 	width: 22vw;
 	height: 40vh;
+
+	@media screen and (max-width: 1199px) {
+		width: 50vw;
+	}
+
+	@media screen and (max-width: 767px) {
+		width: 90vw;
+	}
 `
 
 const Image = styled.img`
 	height: 250px;
 	width: 250px;
 	margin-bottom: 50px;
+
+	@media screen and (max-width: 1440px) {
+		height: 150px;
+		width: 150px;
+	}
 `
 
 const PhotoImage = styled.img`
 	height: 500px;
 	width: 850px;
+
+	@media screen and (max-width: 1199px) {
+		display: none;
+	}
 `
 
 const Input = styled.input`
