@@ -317,7 +317,7 @@ const TabName = styled.span`
 	border-radius: 10px;
 
 	&.active {
-		background-color: #dfbfff;
+		background-color: #9F52B0;
 		color: white;
 	}
 
@@ -372,6 +372,7 @@ const Main = styled.div`
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	background-color: #E9EAED;
 `
 
 export default Galery
