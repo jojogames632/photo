@@ -37,7 +37,7 @@ import baby4 from '../images/baby/baby4.jpg';
 import baby5 from '../images/baby/baby5.jpg';
 
 const Galery = () => {
-	const [activeTab, setActiveTab] = useState('Toutes')
+	const [activeTab, setActiveTab] = useState('Toutes');
 	const data = [
 	{
 		id: 1,
