@@ -74,9 +74,9 @@ const PricesAndServices = () => {
 							<Title>{service.title}</Title>
 							<Description>{service.description}</Description>
 							<Cost>{service.price === '?' ? 'Sur devis' : service.price + ' €'}</Cost>
-							<BotHandband />
 							<BannerImg src={Banner} alt="banner" />
 							<Info>{service.info ?? null}</Info>
+							<BotHandband />
 						</Services>
 					);
 				})}
@@ -95,6 +95,8 @@ const Main = styled.div`
 `
 
 const MainTitle = styled.h1`
+	margin-top: 15px;	
+
 	@media screen and (min-width: 1024px) and (max-width: 1199px) {
 		font-size: 30px;
 	}
@@ -114,6 +116,10 @@ const Title = styled.h2`
 	@media screen and (min-width: 1024px) and (max-width: 1199px) {
 		font-size: 25px;
 	}
+
+	@media screen and (min-width: 769px) and (max-width: 1199px) {
+		margin-top: 25px;
+	}
 	
 	@media screen and (max-width: 768px) {
 		font-size: 18px;
@@ -126,6 +132,7 @@ const ServicesContainer = styled.div`
 	place-items: center;
 	grid-template-columns: repeat(3, 32vw);
 	margin-top: 4vh;
+	overflow: scroll;
 
 	@media screen and (min-width: 768px) and (max-width: 1199px) {
 		grid-template-columns: repeat(2, 50vw);
@@ -135,8 +142,6 @@ const ServicesContainer = styled.div`
 	@media screen and (max-width: 767px) {
 		grid-template-columns: repeat(1, 100vw);
 		margin-top: 40px;
-		height: 630px;
-		overflow: scroll;
 	}	
 `
 
@@ -145,7 +150,7 @@ const Services = styled.div`
 	border-radius: 10px;
 	box-shadow: 3px 3px 6px 2px rgba(0,0,0,0.6);
 	width: 30vw;
-	height: 25vh;
+	height: 250px;
 	margin-bottom: 5vh;
 	display: flex;
 	flex-direction: column;
@@ -156,16 +161,17 @@ const Services = styled.div`
 
 	@media screen and (min-width: 1200px) and (max-width: 1440px) {
 		height: 30vh;
+		height: 250px;
 	}
 
 	@media screen and (min-width: 768px) and (max-width: 1199px) {
 		width: 45vw;
-		height: 22vh;
+		height: 220px;
 	}	
 	
 	@media screen and (max-width: 767px) {
 		width: 90vw;
-		height: 22vh;
+		height: 200px;
 	}
 `
 
@@ -196,7 +202,12 @@ const Cost = styled.span`
 	font-size: 14px;
 
 	@media screen and (min-width: 768px) and (max-width: 1199px) {
-		bottom: 50px;
+		bottom: 40px;
+	}
+
+	@media screen and (max-width: 767px) {
+		bottom: 40px;
+		font-size: 12px;
 	}
 `
 
@@ -229,11 +240,11 @@ const BannerImg = styled.img`
 	@media screen and (max-width: 767px) {
 		height: 50px;
 		width: 90px;
-		bottom: 15px;
+		bottom: 20px;
 	}
 
 	@media screen and (min-width: 768px) and (max-width: 1199px) {
-		bottom: 25px;
+		bottom: 15px;
 		height: 65px;
 	}
 `
@@ -243,6 +254,7 @@ const Info = styled.span`
 	bottom: 5px;
 	font-size: 12px;
 	text-align: center;
+	z-index: 10;
 
 	@media screen and (max-width: 767px) {
 		font-size: 10px;
