@@ -66,10 +66,12 @@ const Main = styled.div`
 	justify-content: center;
 	align-items: center;
 	background-color: #E9EAED;
-	height: calc(100vh - 80px);
+	min-height: calc(100vh - 80px);
+	overflow: scroll;
 `
 
 const LeftAside = styled.div`
+	margin-top: 25px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
